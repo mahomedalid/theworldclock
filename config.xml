@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.lizardsc.interpretauto"
+        versionCode="10" 
+        version   = "0.1">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Interpretauto Api Demo</name>
+
+    <description>
+        Interpretauto Api Demo
+    </description>
+
+    <author href="https://www.lizardsc.com.mx" email="contacto@lizardsc.com.mx">
+        Lizard Software Consulting (c)
+    </author>
+    
+	<gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="org.apache.cordova.geolocation" />
+	<gap:plugin name="org.apache.cordova.device" />
+	
+	    
+    <preference name="phonegap-version" value="3.1.0" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+
+<gap:splash src="themes/images/splashscreen-landscape-800x400.png" />
+<gap:splash src="themes/images/splashscreen-landscape-800x400.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="themes/images/splashscreen-landscape-800x400.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="themes/images/splashscreen-landscape-800x400.png" gap:platform="android" gap:density="mdpi" />
+
+<preference name="android-minSdkVersion" value="8" />
+
+<feature name="http://api.phonegap.com/1.0/file"/>
+<feature name="http://api.phonegap.com/1.0/network"/>
+
+<access origin="http://127.0.0.1*"/>
+<access origin="google.com" subdomains="true" />
+<access origin="https://www.googleapis.com*" subdomains="true" />
+<access origin="https://apis.google.com*" subdomains="true" />
+<access origin="https://accounts.google.com*" subdomains="true" />
+<access origin="https://content.googleapis.com*" subdomains="true" />
+<access origin="https://oauth.googleusercontent.com*" subdomains="true" />
+<access origin="https://ssl.gstatic.com*" subdomains="true" />
+<access origin="http://maho.x10.mx*" subdomains="true" />
+
+<access origin="*" />
+<icon src="icon.png" />
+<gap:platform name="android" />
+</widget>

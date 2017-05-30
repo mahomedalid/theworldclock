@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+    	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    	<meta name="apple-mobile-web-app-capable" content="yes" />
+    	<title>The World Clock</title>
+   
+		<script type="text/javascript" src="phonegap.js"></script>
+
+		<link rel="stylesheet" href="themes/font-awesome.min.css" />
+				
+        <link rel="stylesheet"  href="js/jquery.mobile-1.4.2.min.css">
+		
+		<!-- link rel="stylesheet" href="themes/default.min.css" / -->
+        <!-- link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" / -->
+		
+		<link rel="stylesheet" href="themes/jquerymobile.nativedroid.css" />
+		
+		<link rel="stylesheet" href="themes/jquerymobile.nativedroid.dark.css" />
+		<link rel="stylesheet" href="themes/jquerymobile.nativedroid.color.blue.css" />
+		
+		<script src="jquery.min.js"></script>
+		<script src="js/jquery.mobile-1.4.2.min.js"></script>
+		<script src="js/jquery.md5.js"></script>
+		
+		<script src="js/nativedroid.script.js"></script>
+		
+        <!-- script type="text/javascript" src="liquid.js"></script>
+        <script type="text/javascript" src="liquid.helper.oauth.js"></script -->
+		
+		<script type='text/javascript' src="main.js"></script>
+		<script type='text/javascript' src="timezones.json"></script>
+		
+		<style type="text/css">
+			html, body, #map
+			{
+				height: 100%;
+			}
+			#map
+			{
+				width: 100%;
+			}
+		</style>
+		
+    </head>
+
+    <body id='body' onload="init();">
+     	<!-- INDEX -->
+		<div data-role="page" id='page_index'  data-theme='b'>
+			<div data-role="header" data-position="fixed" data-theme="c" style="background: rgba(0,0,0,1)">
+				<h1><span class='lIcon fa fa-clock-o'></span><strong>The World Clock</strong> <br />
+				<small>worldwide time</small>
+				</h1>
+			</div>
+
+			<div data-role="content">
+				<h2>My clocks</h2>
+				<div style="padding-top: 20px">
+					<ul data-role="listview" id="listado_mis_relojes" data-autodividers="false" data-filter="false"  data-split-icon="delete">
+						<li>
+							<a>
+								<strong>My time</strong><br /> 
+								<p style="font-size: 2em;" id="myclock_content"></p>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-theme="b" style='text-align: center' >
+				<div data-role="navbar">
+					<ul>
+						<li><a data-rel='dialog'  href="#page_addclock" onclick="" data-icon="plus">Add new clock</a></li>
+						
+						<li><a href="#" data-icon="info" onclick="alert('Developed by Lizard Software Consulting www.lizardsc.com.mx')" class="ui-btn-icon-notex">About us</a></li>
+						<!-- li><a href="#" data-icon="gear">Setup</a></li -->
+					</ul>
+				</div><!-- /navbar -->
+			</div>
+		</div>
+		
+		<div  data-role='popup' id='page_addclock'  data-theme="b" data-close-btn="right">
+			<div data-role="header" data-position="fixed" data-theme="b" >
+				<h1>New clock</h1>
+			</div>
+
+			<div data-role='content' data-theme='b'>
+			  <p>Choose your clock...</p>
+			  <form onsubmit="return false;" id='form_new_clock'>
+				  <select id="new_clock_select" name="new_clock_select">
+				  </select>
+				  <div class='showastabs center nobg'>
+					 <a onclick="app.addClock($('#form_new_clock').serializeArray());" href='#' data-rel='back' data-icon='check' data-iconpos='left' data-role='button' data-inline='true'>Okay</a>
+					 <a href='#' data-rel='back' data-icon='delete' data-iconpos='left' data-role='button' data-inline='true'>Cancel</a>
+				  </div>
+			  </form>
+		   </div>
+		</div>
+</html>

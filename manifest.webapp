@@ -1,0 +1,14 @@
+{
+  "name": "The world clock",
+  "version" : "1",
+  "description": "Worlwide times",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icon.png"
+  },
+  "developer": {
+    "name": "Lizard Software Consulting",
+    "url": "http://www.lizardsc.com.mx"
+  },
+  "permissions": {}
+}
